@@ -8,17 +8,16 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Main View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ScreenTransitionExample" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="MainViewController" customModule="ScreenTransitionExample" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B4b-O2-Qoz">
-                                <rect key="frame" x="125" y="126" width="164" height="44"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B4b-O2-Qoz">
+                                <rect key="frame" x="125" y="56" width="164" height="44"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Sugue로 푸시">
                                     <fontDescription key="titleFontDescription" style="UICTFontTextStyleTitle1"/>
@@ -27,31 +26,18 @@
                                     <segue destination="gbJ-DQ-2zz" kind="show" id="ZdK-Xo-wHY"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M32-Ef-9Za">
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M32-Ef-9Za">
                                 <rect key="frame" x="117" y="235" width="181" height="44"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="m16-5Y-Rum"/>
+                                </constraints>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="세구로 프레젠트">
                                     <fontDescription key="titleFontDescription" style="UICTFontTextStyleTitle1"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <segue destination="5Kr-WO-Drp" kind="presentation" id="KbQ-nc-hFf"/>
+                                    <segue destination="5Kr-WO-Drp" kind="presentation" modalPresentationStyle="fullScreen" id="KbQ-nc-hFf"/>
                                 </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="boF-dq-zsE">
-                                <rect key="frame" x="138" y="368" width="138" height="44"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="코드로 푸시">
-                                    <fontDescription key="titleFontDescription" style="UICTFontTextStyleTitle1"/>
-                                </buttonConfiguration>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xpR-Ma-Dap">
-                                <rect key="frame" x="117" y="492" width="181" height="44"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="코드로 프레젠트">
-                                    <fontDescription key="titleFontDescription" style="UICTFontTextStyleTitle1"/>
-                                </buttonConfiguration>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="스토리보드에서 화면 전환용 세그웨이를 사용해서 네비게이션 스택에 새로운 화면을 푸시한다" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4ab-xI-eD9">
                                 <rect key="frame" x="20" y="178" width="374" height="41"/>
@@ -59,22 +45,43 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="세그웨이 써서 루트뷰컨트롤러에 새로운 화면을 덮어씌움" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ut4-m8-Ypn">
-                                <rect key="frame" x="20" y="287" width="375" height="41"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="세그웨이 써서 루트뷰컨트롤러에 새로운 화면을 덮어씌움" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ut4-m8-Ypn">
+                                <rect key="frame" x="19.5" y="442.5" width="375" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="코드를 이용해서 네비게이션 스택에 새로운 화면을 푸시한다." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pSi-WI-6Xz">
-                                <rect key="frame" x="20" y="420" width="374" height="41"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="boF-dq-zsE">
+                                <rect key="frame" x="137" y="483" width="140" height="44"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="코드로 푸시">
+                                    <fontDescription key="titleFontDescription" style="UICTFontTextStyleTitle1"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="tapPush:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Hfe-Ik-qWW"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="코드를 이용해서 네비게이션 스택에 새로운 화면을 푸시한다." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pSi-WI-6Xz">
+                                <rect key="frame" x="20" y="537" width="374" height="41"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="코드를 이용해서 네비게이션 컨트롤러에 루트뷰 화면을 덮어쓴다" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qt1-c5-rNu">
-                                <rect key="frame" x="21" y="556" width="424" height="41"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xpR-Ma-Dap">
+                                <rect key="frame" x="116" y="607" width="181" height="44"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="코드로 프레젠트">
+                                    <fontDescription key="titleFontDescription" style="UICTFontTextStyleTitle1"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="CodePresentPush:" destination="BYZ-38-t0r" eventType="touchUpInside" id="HWG-3y-WfV"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="코드를 이용해서 네비게이션 컨트롤러에 루트뷰 화면을 덮어쓴다" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qt1-c5-rNu">
+                                <rect key="frame" x="21" y="671" width="424" height="41"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="41" id="AUO-7Q-qC3"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -83,12 +90,28 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="xpR-Ma-Dap" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="116" id="16x-j9-STt"/>
+                            <constraint firstItem="B4b-O2-Qoz" firstAttribute="centerX" secondItem="ut4-m8-Ypn" secondAttribute="centerX" id="3et-x0-XCB"/>
+                            <constraint firstItem="qt1-c5-rNu" firstAttribute="top" secondItem="xpR-Ma-Dap" secondAttribute="bottom" constant="20" id="69v-dy-aXb"/>
+                            <constraint firstItem="4ab-xI-eD9" firstAttribute="top" secondItem="B4b-O2-Qoz" secondAttribute="bottom" constant="8" symbolic="YES" id="A8f-BT-SLt"/>
+                            <constraint firstItem="boF-dq-zsE" firstAttribute="centerX" secondItem="xpR-Ma-Dap" secondAttribute="centerX" id="Gbe-8a-kTg"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="qt1-c5-rNu" secondAttribute="trailing" constant="-51" id="N3U-Ik-7xZ"/>
+                            <constraint firstItem="boF-dq-zsE" firstAttribute="top" secondItem="ut4-m8-Ypn" secondAttribute="bottom" constant="20" id="ND7-yA-rB5"/>
                             <constraint firstItem="4ab-xI-eD9" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="PtJ-1y-Mmc"/>
                             <constraint firstItem="4ab-xI-eD9" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="Qp0-b9-9OM"/>
                             <constraint firstItem="pSi-WI-6Xz" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="T31-sM-o9V"/>
+                            <constraint firstItem="xpR-Ma-Dap" firstAttribute="centerX" secondItem="pSi-WI-6Xz" secondAttribute="centerX" id="Usg-6n-6zt"/>
+                            <constraint firstAttribute="bottom" secondItem="boF-dq-zsE" secondAttribute="bottom" constant="369" id="ZOP-Tz-rXz"/>
                             <constraint firstAttribute="trailing" secondItem="4ab-xI-eD9" secondAttribute="trailing" constant="20" id="ZYo-ww-dWy"/>
                             <constraint firstAttribute="trailing" secondItem="pSi-WI-6Xz" secondAttribute="trailing" constant="20" id="f3a-H5-Vdn"/>
+                            <constraint firstItem="M32-Ef-9Za" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="117" id="fbv-YH-uzV"/>
+                            <constraint firstItem="boF-dq-zsE" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="137" id="hdQ-Ie-WhU"/>
+                            <constraint firstItem="qt1-c5-rNu" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="21" id="jan-bM-f1X"/>
+                            <constraint firstItem="xpR-Ma-Dap" firstAttribute="centerX" secondItem="B4b-O2-Qoz" secondAttribute="centerX" id="qyM-rn-sCY"/>
+                            <constraint firstItem="xpR-Ma-Dap" firstAttribute="top" secondItem="pSi-WI-6Xz" secondAttribute="bottom" constant="29" id="vVh-nd-mzR"/>
+                            <constraint firstItem="B4b-O2-Qoz" firstAttribute="centerX" secondItem="M32-Ef-9Za" secondAttribute="centerX" id="xBI-kk-C5B"/>
                             <constraint firstItem="pSi-WI-6Xz" firstAttribute="top" secondItem="boF-dq-zsE" secondAttribute="bottom" constant="10" id="ytw-TU-vjG"/>
+                            <constraint firstItem="M32-Ef-9Za" firstAttribute="top" secondItem="4ab-xI-eD9" secondAttribute="bottom" constant="16" id="zDS-gd-uvc"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="hwG-2I-MJV"/>
@@ -145,7 +168,7 @@
             <objects>
                 <viewController id="5Kr-WO-Drp" customClass="ModalViewController" customModule="ScreenTransitionExample" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="jay-NB-oeN">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Br-bq-Q5a">
@@ -165,6 +188,72 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Xvg-gz-T6C" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="502.89855072463774" y="770.75892857142856"/>
+        </scene>
+        <!--Code Present View Controller-->
+        <scene sceneID="SAr-JV-2aU">
+            <objects>
+                <viewController storyboardIdentifier="CodePresentPushViewController" id="Rl5-Wt-zGw" customClass="CodePresentViewController" customModule="ScreenTransitionExample" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="kH5-Qq-PVK">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="코드로 프레젠트" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BiC-HC-uVI">
+                                <rect key="frame" x="153" y="179" width="108" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9dt-NP-LWq">
+                                <rect key="frame" x="174" y="622" width="67" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                <connections>
+                                    <action selector="backButton:" destination="Rl5-Wt-zGw" eventType="touchUpInside" id="21C-SZ-amm"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="oUn-ZS-Bq3"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1Hi-d8-iLx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1947" y="940"/>
+        </scene>
+        <!--Code Push View Controller-->
+        <scene sceneID="yda-m7-gst">
+            <objects>
+                <viewController storyboardIdentifier="CodePushViewController" id="YN3-ae-iXB" customClass="CodePushViewController" customModule="ScreenTransitionExample" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="7ld-Eq-0yO" customClass="CodePush">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="코드로 푸시" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m0M-hP-gPY">
+                                <rect key="frame" x="186" y="185" width="78" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TjE-nW-cXf">
+                                <rect key="frame" x="171" y="601" width="73" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="뒤로가기"/>
+                                <connections>
+                                    <action selector="backButton:" destination="YN3-ae-iXB" eventType="touchUpInside" id="CpC-AJ-6Ge"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="4lT-Oq-D2G"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RR2-Jb-zH0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-626" y="902"/>
         </scene>
     </scenes>
     <resources>

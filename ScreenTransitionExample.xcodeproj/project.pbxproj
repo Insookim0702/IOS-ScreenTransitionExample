@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		43DB8D0A28A7A041005F5F99 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43DB8D0928A7A041005F5F99 /* AppDelegate.swift */; };
 		43DB8D0C28A7A041005F5F99 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43DB8D0B28A7A041005F5F99 /* SceneDelegate.swift */; };
-		43DB8D0E28A7A041005F5F99 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43DB8D0D28A7A041005F5F99 /* ViewController.swift */; };
 		43DB8D1128A7A041005F5F99 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 43DB8D0F28A7A041005F5F99 /* Main.storyboard */; };
 		43DB8D1328A7A043005F5F99 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 43DB8D1228A7A043005F5F99 /* Assets.xcassets */; };
 		43DB8D1628A7A043005F5F99 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 43DB8D1428A7A043005F5F99 /* LaunchScreen.storyboard */; };
@@ -18,6 +17,9 @@
 		43DB8D2D28A7A043005F5F99 /* ScreenTransitionExampleUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43DB8D2C28A7A043005F5F99 /* ScreenTransitionExampleUITestsLaunchTests.swift */; };
 		43DB8D3C28A7A8DE005F5F99 /* SegePushViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43DB8D3B28A7A8DE005F5F99 /* SegePushViewController.swift */; };
 		43DB8D3E28A7AB03005F5F99 /* ModalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43DB8D3D28A7AB03005F5F99 /* ModalViewController.swift */; };
+		43DB8D4028AA318E005F5F99 /* CodePushViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43DB8D3F28AA318E005F5F99 /* CodePushViewController.swift */; };
+		43DB8D4228AA3637005F5F99 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43DB8D4128AA3637005F5F99 /* MainViewController.swift */; };
+		43DB8D4428AA3A5E005F5F99 /* CodePresentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43DB8D4328AA3A5E005F5F99 /* CodePresentViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,7 +43,6 @@
 		43DB8D0628A7A041005F5F99 /* ScreenTransitionExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ScreenTransitionExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		43DB8D0928A7A041005F5F99 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		43DB8D0B28A7A041005F5F99 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		43DB8D0D28A7A041005F5F99 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		43DB8D1028A7A041005F5F99 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		43DB8D1228A7A043005F5F99 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		43DB8D1528A7A043005F5F99 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -53,6 +54,9 @@
 		43DB8D2C28A7A043005F5F99 /* ScreenTransitionExampleUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenTransitionExampleUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		43DB8D3B28A7A8DE005F5F99 /* SegePushViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegePushViewController.swift; sourceTree = "<group>"; };
 		43DB8D3D28A7AB03005F5F99 /* ModalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModalViewController.swift; sourceTree = "<group>"; };
+		43DB8D3F28AA318E005F5F99 /* CodePushViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodePushViewController.swift; sourceTree = "<group>"; };
+		43DB8D4128AA3637005F5F99 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		43DB8D4328AA3A5E005F5F99 /* CodePresentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodePresentViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,13 +109,15 @@
 			children = (
 				43DB8D0928A7A041005F5F99 /* AppDelegate.swift */,
 				43DB8D0B28A7A041005F5F99 /* SceneDelegate.swift */,
-				43DB8D0D28A7A041005F5F99 /* ViewController.swift */,
 				43DB8D0F28A7A041005F5F99 /* Main.storyboard */,
 				43DB8D1228A7A043005F5F99 /* Assets.xcassets */,
 				43DB8D1428A7A043005F5F99 /* LaunchScreen.storyboard */,
 				43DB8D1728A7A043005F5F99 /* Info.plist */,
 				43DB8D3B28A7A8DE005F5F99 /* SegePushViewController.swift */,
 				43DB8D3D28A7AB03005F5F99 /* ModalViewController.swift */,
+				43DB8D3F28AA318E005F5F99 /* CodePushViewController.swift */,
+				43DB8D4128AA3637005F5F99 /* MainViewController.swift */,
+				43DB8D4328AA3A5E005F5F99 /* CodePresentViewController.swift */,
 			);
 			path = ScreenTransitionExample;
 			sourceTree = "<group>";
@@ -264,9 +270,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				43DB8D0E28A7A041005F5F99 /* ViewController.swift in Sources */,
+				43DB8D4028AA318E005F5F99 /* CodePushViewController.swift in Sources */,
 				43DB8D3E28A7AB03005F5F99 /* ModalViewController.swift in Sources */,
 				43DB8D0A28A7A041005F5F99 /* AppDelegate.swift in Sources */,
+				43DB8D4228AA3637005F5F99 /* MainViewController.swift in Sources */,
+				43DB8D4428AA3A5E005F5F99 /* CodePresentViewController.swift in Sources */,
 				43DB8D3C28A7A8DE005F5F99 /* SegePushViewController.swift in Sources */,
 				43DB8D0C28A7A041005F5F99 /* SceneDelegate.swift in Sources */,
 			);
